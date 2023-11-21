@@ -6,9 +6,3 @@ export default function Home() {
   );
 }
 
-
-//let array1:Array<string> = ['this', 'is','an','array','of','strings'];
-//let array1dash2:string[] = [`another`, `way of saying 'hey' this is an array of strings` ]
-
-//let array1dash2:string[] = [`another`, `way of saying 'hey' this is an array of strings` ]
-//

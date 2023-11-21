@@ -1,30 +1,24 @@
 import Link from "next/link";
-import React from "react";
+import react from "react";
 
-export default function Page() {
+type faveParam = { params: { faves: string } };
+
+export function generateMetadata({ params }: faveParam) {
+  const modTitle = params.faves[0].toUpperCase() + params.faves.slice(1);
+  return {
+    title: `Kara's Favourite Things - ${modTitle}`,
+    description: `Karas Favourite stuff - fun facts about ${params.faves}`,
+  };
+}
+
+export default function Page({ params }: faveParam) {
   return (
-    <div>
-      <h2>
-        This is another page, that isn't really about a gallery yet either
-      </h2>
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSepJ3mEjyuj1Ci2QQyLvAPKaVmJt9_ys3Hjg&usqp=CAU"
-        width={250}
-        height={250}
-        alt="All of the pink!"
-      />
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMNGoJZHr1cS_NdAqS2aLw6U-lsxxn0Qcwaq_ShdSWUiiivyQsPHs6e6AuW15ylCODaSo&usqp=CAU"
-        width={250}
-        height={250}
-        alt="Oooo Glitter!"
-      />
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoG7REBrDdf_xQw8FE8X2D6ZWFp8YXAw0rRA&usqp=CAU"
-        width={250}
-        height={250}
-        alt="A sunset"
-      />
-    </div>
+    <main>
+      <div>
+        <h2>This is my dynamic route paramater: {params.faves} </h2>
+        <Link href="/about">Back it up</Link>
+        <p>WHY WON'T YOU WORK!!!!</p>
+      </div>
+    </main>
   );
 }
