@@ -10,7 +10,41 @@ export default function Home() {
       width={250}
       height={250}
       alt="Picture of water flower" />
-        <p className="text-center m-5">Hellooooo, this is some text!</p>
+      <h1 className="text-center m-5">Welcome!</h1>
+        <p className="text-center m-5">Hellooooo, this is my website all about me.</p>
+        <h2 className="text-center m-5">My fave things...</h2>
+        <p className="text-center m-5">An exciting table of things I like, whoop!</p>
+        <table className="hover:table-fixed text-center m-5 justify-between">
+  <thead>
+    <tr>
+      <th>Stuff</th>
+      <th>Films</th>
+      <th>Hobbies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Most music</td>
+      <td>Shaun of the dead</td>
+      <td>Computering things</td>
+    </tr>
+    <tr>
+      <td>All things pink</td>
+      <td>Legally Blonde</td>
+      <td>Watching films</td>
+    </tr>
+    <tr>
+      <td>Animals</td>
+      <td>Insideous</td>
+      <td>Crafty bits</td>
+    </tr>
+    <tr>
+      <td>Zen</td>
+      <td>Barbie</td>
+      <td>Coffee</td>
+    </tr>
+  </tbody>
+</table>
       </div>
     </main>
   );
