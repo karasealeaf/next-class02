@@ -108,6 +108,10 @@ export default function Page({
         me...you can put them into ascending of descending order at your own
         leisure! I know :smug: You are very welcome !
       </h2>
+      <p className="text-center hover:animate-spin">
+        <Link href="/">Go home! </Link>
+      </p>
+      <img src='/Profile.png' width={209} height={290} alt='This is an image of me!'/>
 <div className="text-center animate-bounce ">
       <p>{searchParams.sortBy}</p>
       <br />
@@ -118,10 +122,7 @@ export default function Page({
       <Link href="/about?sortBy=desc">Sort by descending</Link>
       <br />
       </div>
-      <p className="text-center hover:animate-spin">
-        <Link href="/">Go home! </Link>
-      </p>
-      <h2 className="text-center m-5">My fave things...</h2>
+      
       <p className="text-center m-5">
         An exciting list of things I like, whoop whoop!
       </p>
@@ -135,9 +136,12 @@ export default function Page({
             >
               {fave.name}
             </Link>
+           
           </div>
+          
         );
       })}
+       
     </div>
   );
 }

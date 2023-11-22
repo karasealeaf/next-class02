@@ -1,5 +1,5 @@
 import Link from "next/link";
-import react from "react";
+import Image from "next/image";
 
 type faveParam = { params: { faves: string } };
 
@@ -16,8 +16,9 @@ export default function Page({ params }: faveParam) {
     <main>
       <div>
         <h2>This is my dynamic route paramater: {params.faves} </h2>
-        <Link href="/about">Back it up</Link>
+        <Link href='/about'>Back it up</Link>
         <p>WHY WON'T YOU WORK!!!!</p>
+        <Image src='/Profile.png' width={418} height={580} alt='This is an image of me!'/>
       </div>
     </main>
   );
