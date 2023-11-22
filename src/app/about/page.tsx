@@ -106,23 +106,30 @@ export default function Page({
       <h2 className="text-center border-opacity-1 rounded-sm border-2 border-pink-400 ">
         This is the about page, that is really just a list of some things about
         me...you can put them into ascending of descending order at your own
-        leisure! I know :smug: You are very welcome !
+        leisure! I know 😏 You are very welcome !
       </h2>
       <p className="text-center hover:animate-spin">
         <Link href="/">Go home! </Link>
       </p>
-      <img src='/Profile.png' width={209} height={290} alt='This is an image of me!'/>
-<div className="text-center animate-bounce ">
-      <p>{searchParams.sortBy}</p>
-      <br />
-      <Link href="/about">Remove the sort</Link>
-      <br />
-      <Link href="/about?sortBy=asc">Sort by ascending</Link>
-      <br />
-      <Link href="/about?sortBy=desc">Sort by descending</Link>
-      <br />
+
+      <img
+        className="place-item-center m-5 hover:animate-spin h-250 w-250 mr-3 ... rounded-full"
+        src="/Profile.png"
+        width={209}
+        height={290}
+        alt="This is an image of me!"
+      />
+      <div className="text-center animate-bounce ">
+        <p>{searchParams.sortBy}</p>
+        <br />
+        <Link href="/about">Remove the sort</Link>
+        <br />
+        <Link href="/about?sortBy=asc">Sort by ascending</Link>
+        <br />
+        <Link href="/about?sortBy=desc">Sort by descending</Link>
+        <br />
       </div>
-      
+
       <p className="text-center m-5">
         An exciting list of things I like, whoop whoop!
       </p>
@@ -136,12 +143,9 @@ export default function Page({
             >
               {fave.name}
             </Link>
-           
           </div>
-          
         );
       })}
-       
     </div>
   );
 }
